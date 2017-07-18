@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>设置</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <div class="set_login">立即登录</div>
+  </ion-item>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+      {{ item }}
+    </button>
+  </ion-list>
+</ion-content>
+
+
+<style>
+  .set_login{
+    width:120px;
+    height: 30px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+</style>

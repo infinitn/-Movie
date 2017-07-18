@@ -1,3 +1,93 @@
 page-contact {
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .setting{
+    font-size: 26px;
+    float: right;
+  }
+  .btn{
+    width:100%;
+    margin-top: 15px;
+    background-color: #F2CC03;
+  }
+  ul{
+    list-style: none;
+    margin: 15px;
+  }
+  .denglu ul li{
+    float: left;
+    width:80px;
+    height: 45px;
+    text-align: center;
+    margin-right: 15px;
+  }
+  .denglu ul li a{
+    text-decoration: none;
+  }
+  .denglu ul li a p{
+    color: #000;
+  }
+  .denglu .message{
+    font-size: 30px;
+    color: orange;
+  }
+  .yingpian{
+    width:414px;
+    height:300px;
+    //background-color: red;
+  }
+  .yingpian ul{
+    overflow: hidden;
+    width: 414px;
+    height: 35px;
+    margin-left: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .yingpian ul li{
+    float: left;
+    width:207px;
+    height:30px;
 
+    text-align: center;
+    font-size: 18px;
+  }
+  .yingpian p.collect{
+    width:414px;
+    height:30px;
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+  }
+  .yingpian .soucang{
+    width:140px;
+    height:220px;
+    border: 1px solid #ddd;
+    margin: 15px;
+    position: relative;
+  }
+  .yingpian .soucang .add{
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .yingpian .soucang  p.piandan{
+    text-align: center;
+    font-size: 16px;
+    width:140px;
+    height:30px;
+    margin-top: 130px;
+  }
+
+  .hide{
+    z-index: 999;
+    width: 320px;
+    height: 320px;
+    background-color:#eee;
+  }
 }
+
