@@ -1,17 +1,187 @@
+
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>侃侃Movie</ion-title>
+    <ion-icon name="search"></ion-icon>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <div>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="kittens">
+        热门推荐
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        毒舌影评
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  <!--热门推荐-->
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-slides pager style="height: 150px">
+          <ion-slide class="banner">
+            <img src="assets/images/1.jpg" alt="">
+          </ion-slide>
+          <ion-slide  class="banner">
+            <img src="assets/images/4.jpg" alt="">
+          </ion-slide>
+          <ion-slide  class="banner">
+            <img src="assets/images/3.jpg" alt="">
+          </ion-slide>
+        </ion-slides>
+        <ion-grid>
+          <ion-row class="head">
+            <ion-col col-6><ion-icon name="podium" style="font-size: 30px"></ion-icon><span><b>热度排行榜</b> <br>人气影片帮你选</span></ion-col>
+            <ion-col col-6><ion-icon name="list-box-outline" style="font-size: 30px"></ion-icon><span><b>电影分类</b><br>国别题材都在这</span></ion-col>
+          </ion-row>
+        </ion-grid>
+        <p class="hot"><span><i>热门影评</i></span></p>
+        <div class="h-head">
+          <p><ion-icon name="bicycle"></ion-icon> <span> 毒Sir</span></p>
+          <p>年度评分第一国产片就这么完了？不能吧</p>
+          <img src="assets/images/5.jpg" alt=""><br>
+          <p><span>14小时前</span><span>38 <ion-icon name="text-outline"></ion-icon></span></p>
+        </div>
+        <ion-list class="list1">
+          <ion-item></ion-item>
+          <ion-item>
+            <div>
+              <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
+              <p>/ 来自《花甲男孩转大人》</p>
+              <div class="l-hot">
+                <p>
+                  <ion-icon name="bicycle"></ion-icon>
+                  <span>肉叔</span>
+                  <span>15小时前</span>
+                </p>
+                <p>
+                  <span>20 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+            <img src="assets/images/6.jpg">
+          </ion-item>
+          <ion-item>
+            <div>
+              <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
+              <p>/ 来自《花甲男孩转大人》</p>
+              <div class="l-hot">
+                <p>
+                  <ion-icon name="bicycle"></ion-icon>
+                  <span>肉叔</span>
+                  <span>15小时前</span>
+                </p>
+                <p>
+                  <span>20 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+            <img src="assets/images/6.jpg">
+          </ion-item>
+          <ion-item>
+            <div>
+              <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
+              <p>/ 来自《花甲男孩转大人》</p>
+              <div class="l-hot">
+                <p>
+                  <ion-icon name="bicycle"></ion-icon>
+                  <span>肉叔</span>
+                  <span>15小时前</span>
+                </p>
+                <p>
+                  <span>20 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+            <img src="assets/images/6.jpg">
+          </ion-item>
+          <ion-item>
+            <div>
+              <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
+              <p>/ 来自《花甲男孩转大人》</p>
+              <div class="l-hot">
+                <p>
+                  <ion-icon name="bicycle"></ion-icon>
+                  <span>肉叔</span>
+                  <span>15小时前</span>
+                </p>
+                <p>
+                  <span>20 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+            <img src="assets/images/6.jpg">
+          </ion-item>
+          <ion-item>
+            <div>
+              <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
+              <p>/ 来自《花甲男孩转大人》</p>
+              <div class="l-hot">
+                <p>
+                  <ion-icon name="bicycle"></ion-icon>
+                  <span>肉叔</span>
+                  <span>15小时前</span>
+                </p>
+                <p>
+                  <span>20 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+            <img src="assets/images/6.jpg">
+          </ion-item>
+          <ion-item>
+            <div>
+              <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
+              <p>/ 来自《花甲男孩转大人》</p>
+              <div class="l-hot">
+                <p>
+                  <ion-icon name="bicycle"></ion-icon>
+                  <span>肉叔</span>
+                  <span>15小时前</span>
+                </p>
+                <p>
+                  <span>20 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+            <img src="assets/images/6.jpg">
+          </ion-item>
+          <ion-item>
+            <div>
+              <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
+              <p>/ 来自《花甲男孩转大人》</p>
+              <div class="l-hot">
+                <p>
+                  <ion-icon name="bicycle"></ion-icon>
+                  <span>肉叔</span>
+                  <span>15小时前</span>
+                </p>
+                <p>
+                  <span>20 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </div>
+            </div>
+            <img src="assets/images/6.jpg">
+          </ion-item>
+        </ion-list>
+        <p class="hot"><span><i>热门汁源</i></span></p>
+        <div class="imgs1">
+          <img src="assets/images/7.jpg" alt="">
+          <img src="assets/images/8.jpg" alt="">
+          <img src="assets/images/9.jpg" alt="">
+          <img src="assets/images/10.jpg" alt="">
+        </div>
+      </ion-item>
+    </ion-list>
+    <!--毒舌电影-->
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <h2>毒舌影评</h2>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>
