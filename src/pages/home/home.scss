@@ -1,3 +1,134 @@
 page-home {
-
+  .banner img{
+    width: 100%;
+    height: 100%;
+  }
+  .ion-segment-button{
+    border: none;
+    background-color: #fff;
+  }
+  .list-ios > .item-block:last-child{
+    border-bottom: none;
+  }
+  .head{
+    height: 38px;
+    text-align: center;
+    color: darkorange;
+  }
+  .head b{
+    color: #000;
+  }
+  .head span{
+    font-size: 12px;
+    float: right;
+    color: #999;
+  }
+  .list-ios > .item-block:first-child{
+    border-top: none;
+  }
+  .segment-ios{
+    border-bottom: none;
+  }
+  .segment-ios .segment-button{
+    border-width: 0;
+    border-style: none;
+    color: #ccc;
+  }
+  .segment-ios .segment-button.segment-activated{
+    background-color: #fff;
+    color: #000;
+  }
+  .hot{
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:10px;
+    color: #000;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    transform: skew(-45deg);
+    font-weight: 500;
+  }
+  .hot span{
+    display: inline-block;
+    transform: skew(52deg);
+  }
+  .list-ios .item-block .item-inner{
+    border: none;
+  }
+  .list-ios.item-block .item-inner{
+    border: none;
+  }
+  .h-head{
+    margin-bottom:20px;
+  }
+  .h-head p:nth-child(2){
+    color: #000;
+  }
+  .h-head p:nth-child(5){
+    font-size:12px;
+  }
+  .h-head p:nth-child(5) span:nth-child(1){
+    float: left;
+  }
+  .h-head p:nth-child(5) span:nth-child(2){
+    float: right;
+  }
+  .label-ios{
+    margin: 0;
+  }
+  .list .item-ios.item-block .item-inner{
+    padding: 0;
+  }
+  .item.item-block.item-ios{
+    padding: 0;
+  }
+  .list1 ion-item{
+    margin-bottom: 15px;
+  }
+  .list1 div {
+    width: 55%;
+    float: left;
+    overflow: hidden;
+  }
+  .list1 img{
+    width: 38%;
+    float: right;
+  }
+  .list1 .text1{
+    color: #000;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 15px;
+    //word-wrap: break-word;
+    //word-break: break-all;
+    //display: -webkit-box;
+    //-webkit-box-orient: vertical;
+    //-webkit-line-clamp: 1;
+    //overflow: hidden;
+  }
+  .list1 .text+p{
+    font-size: 9px;
+  }
+  .list1 .l-hot{
+    width: 100%;
+    margin-top:15px;
+    font-size: 9px;
+    color: #cccccc;
+  }
+  .list1 .l-hot p{
+    float: left;
+  }
+  .list1 .l-hot p:nth-child(2){
+    float: right;
+  }
+  .imgs1{
+    box-sizing: border-box;
+  }
+  .imgs1 img{
+    float: left;
+    box-sizing: border-box;
+    width: 50%;
+  }
 }
