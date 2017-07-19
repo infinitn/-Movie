@@ -13,7 +13,7 @@
 
     <ion-item>
       <ion-label fixed>账号:</ion-label>
-      <ion-input type="text" value="" placeholder="请输入手机号"></ion-input>
+      <ion-input type="text" placeholder="请输入手机号"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -25,8 +25,8 @@
 
   <button ion-button block>登录</button>
   <div class="forgetgroup">
-    <a href="" class="forget">忘记密码</a>
-    <a href="" class="sin">新用户注册</a>
+    <a class="forget" (click)="forget()">忘记密码</a>
+    <a class="sin" (click)="sign()">新用户注册</a>
   </div>
 
   <fieldset>
@@ -34,16 +34,16 @@
   </fieldset>
 
   <div class="other">
-    <ul>
-      <li>
+    <ul class="row">
+      <li col-4>
         <img src="../assets/icon/微信.png" alt="">
         <p>微信</p>
       </li>
-      <li>
+      <li col-4>
         <img src="../assets/icon/QQ.png" alt="">
         <p>QQ</p>
       </li>
-      <li>
+      <li col-4>
         <img src="../assets/icon/微博.png" alt="">
         <p>微博</p>
       </li>
