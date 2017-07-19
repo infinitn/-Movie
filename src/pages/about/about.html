@@ -1,90 +1,133 @@
-<div padding>
-  <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="kittens">
-      资源
-    </ion-segment-button>
-    <ion-segment-button value="puppies">
-      院线
-    </ion-segment-button>
-  </ion-segment>
-</div>
+<ion-header>
+  <div>
+    <ion-segment [(ngModel)]="pet" class="nav">
+      <ion-icon name="ios-options-outline"></ion-icon>
+      <ion-icon name="ios-search-outline"></ion-icon>
+      <ion-segment-button value="kittens">
 
-<div [ngSwitch]="pet">
-  <ion-list *ngSwitchCase="'puppies'">
-    <div padding>
-      <ion-segment [(ngModel)]="icon">
-        <ion-segment-button value="onShow" style="border:none">
-          正在热映
-        </ion-segment-button>
-        <div>|</div>
-        <ion-segment-button value="willShow" style="border:none">
-          即将热映
-        </ion-segment-button>
-      </ion-segment>
-    </div>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-2 offset-7>
+              资源
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-segment-button>
+      <ion-segment-button value="puppies">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-3 offset-2>
+              院线
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-header>
+<ion-content>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <div>
+        <ion-segment [(ngModel)]="icon">
+          <ion-segment-button value="onShow" style="border:none">
+            正在热映
+          </ion-segment-button>
+          <div>|</div>
+          <ion-segment-button value="willShow" style="border:none">
+            即将热映
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+      <div [ngSwitch]="icon">
+        <ion-list *ngSwitchCase="'onShow'">
+          <ion-card (click)="detail(1)">
+            <ion-grid>
+              <ion-row>
+                <ion-col col-3>
+                  <img src="assets/images/about/1.jpg" alt="">
+                </ion-col>
+                <ion-col col-6 offset-1>
+                  <h5>长城</h5>
+                  <p style="color: #ccc;">“新颖视角重塑长城经典”</p>
+                  <p>马特·达蒙/景甜/张涵予/林更新/彭于晏/刘德华/黄轩</p>
+                  <p>2017-01-01 上映</p>
+                </ion-col>
+                <ion-col col-2>
+                  <button ion-button class="goupiao">购票</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
 
-    <div [ngSwitch]="icon" class="list_film">
-      <ion-list *ngSwitchCase="'onShow'">
-        <ion-card style="position: relative; width: 80%; height: 300px;">
-          <ion-item  style="width: 35%; height: 80%;">
-            <img src="http://p0.qhimg.com/d/dy_67dc8f10e8726da62424613d2e6f5044.jpg">
-          </ion-item>
-          <ion-card-content style="width: 40%; height: 40%;float: right;position: absolute; top: 20%; left: 40%;">
-            <h3>长城</h3>
-            <p style="font-size: 18px;">“新颖视角重塑长城经典”</p>
-            <p style="color: #ccc; font-size:15px;">马特·达蒙/景甜/张涵予/林更新/彭于晏/刘德华/黄轩</p>
-            <p>2017-01-01 上映</p>
-          </ion-card-content>
-          <button ion-button style="background-color:gold; color: #000; position: absolute; top:30%; left: 85%;">购票</button>
-        </ion-card>
+          <ion-card>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-3>
+                  <img src="assets/images/about/2.jpg" alt="">
+                </ion-col>
+                <ion-col col-6 offset-1>
+                  <h5>金刚骷髅岛</h5>
+                  <p style="color: #ccc;">“新颖视角重塑金刚经典”</p>
+                  <p>汤姆·希德勒斯顿 布丽·拉尔森 塞缪尔·杰克逊 约翰·古德曼 景甜 约翰· 托比·凯贝尔</p>
+                  <p>2017-01-01 上映</p>
+                </ion-col>
+                <ion-col col-2>
+                  <button ion-button class="goupiao">购票</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-list>
+        <ion-list *ngSwitchCase="'willShow'">
+          <ion-card>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-3>
+                  <img src="assets/images/about/5.jpg" alt="">
+                </ion-col>
+                <ion-col col-6 offset-1>
+                  <h5>雷神</h5>
+                  <p style="color: #ccc;">“新颖视角重塑雷神经典”</p>
+                  <p>克里斯·海姆斯沃斯，汤姆·希德勒斯顿，娜塔丽·波特曼</p>
+                  <p>2017-01-01 上映</p>
+                </ion-col>
+                <ion-col col-2>
+                  <button ion-button class="goupiao">购票</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
 
-        <ion-card style="position: relative; width: 80%; height: 300px;">
-          <ion-item  style="width: 35%; height: 80%;">
-            <img src="http://p0.qhimg.com/t010f40db70ab0829f0.jpg">
-          </ion-item>
-          <ion-card-content style="width: 40%; height: 40%;float: right;position: absolute; top: 20%; left: 40%;">
-            <h3>长城</h3>
-            <p style="font-size: 18px;">“新颖视角重塑金刚经典”</p>
-            <p style="color: #ccc; font-size:15px;">汤姆·希德勒斯顿 布丽·拉尔森 塞缪尔·杰克逊 约翰·古德曼 景甜 约翰· 托比·凯贝尔 科里·霍金斯 汤姆·威尔金森 托马斯·曼 杰森·米切尔</p>
-            <p>2017-01-01 上映</p>
-          </ion-card-content>
-          <button ion-button style="background-color:gold; color: #000; position: absolute; top:30%; left: 85%;">购票</button>
-        </ion-card>
+          <ion-card>
+            <ion-grid>
+              <ion-row>
+                <ion-col col-3>
+                  <img src="assets/images/about/4.jpg" alt="">
+                </ion-col>
+                <ion-col col-6 offset-1>
+                  <h5>独立日</h5>
+                  <p style="color: #ccc;">“新颖视角重塑经典”</p>
+                  <p>克里斯·海姆斯沃斯，汤姆·希德勒斯顿，娜塔丽·波特曼</p>
+                  <p>2017-01-01 上映</p>
+                </ion-col>
+                <ion-col col-2>
+                  <button ion-button class="goupiao">购票</button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+        </ion-list>
+      </div>
+    </ion-list>
+    <ion-list *ngSwitchCase="'kittens'">
+     <ion-card class="ion-card">
+       <img src="assets/images/9.jpg" alt="">
+       <div class="card-title">悟空传</div>
+       <div class="card-subtitle">7月13震撼播映</div>
+     </ion-card>
+    </ion-list>
+  </div>
+</ion-content>
 
-
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="http://p2.qhimg.com/d/dy_2620259219f9bcc5b060e820d21b3779.jpg">
-          </ion-thumbnail>
-          <h2>Luna</h2>
-        </ion-item>
-      </ion-list>
-
-      <ion-list *ngSwitchCase="'willShow'">
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="http://p2.qhimg.com/d/dy_2620259219f9bcc5b060e820d21b3779.jpg">
-          </ion-thumbnail>
-          <h2>Luna</h2>
-        </ion-item>
-      </ion-list>
-
-      <ion-list *ngSwitchCase="'kittens'">
-        <ion-card>
-          <img src="http://p0.qhimg.com/d/dy_67dc8f10e8726da62424613d2e6f5044.jpg"/>
-          <ion-card-content>
-            <ion-card-title>
-              Nine Inch Nails Live
-            </ion-card-title>
-            <p>
-              The most popular industrial group ever, and largely
-              responsible for bringing the music to a mass audience.
-            </p>
-          </ion-card-content>
-        </ion-card>
-        <ion-item>
-          <p>ssfashfha</p>
-        </ion-item>
-      </ion-list>
-    </div>
 
