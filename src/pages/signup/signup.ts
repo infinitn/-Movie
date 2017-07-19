@@ -33,6 +33,7 @@ export class SignupPage {
     console.log('ionViewDidLoad SignupPage');
   }
 
+
   //注册
   zhuce()
   {

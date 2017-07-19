@@ -30,6 +30,7 @@ import {UserService} from "./user.service";
     TaopiaopiaoPage,
     SignupPage,
     ForgetPage
+
   ],
   imports: [
     BrowserModule,

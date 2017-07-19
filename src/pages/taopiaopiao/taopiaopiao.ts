@@ -17,8 +17,8 @@ export class TaopiaopiaoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad TaopiaopiaoPage');
-  }
+  // ionViewDidLoad() {
+  //   console.log('ionViewDidLoad TaopiaopiaoPage');
+  // }
 
 }
