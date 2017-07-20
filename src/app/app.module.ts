@@ -17,6 +17,7 @@ import {SignupPage} from "../pages/signup/signup";
 import {ForgetPage} from "../pages/forget/forget";
 import {HttpModule} from "@angular/http";
 import {UserService} from "./user.service";
+import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {UserService} from "./user.service";
     LoginPage,
     TaopiaopiaoPage,
     SignupPage,
-    ForgetPage
+    ForgetPage,
+    MovieDetailPage
 
   ],
   imports: [
@@ -48,7 +50,8 @@ import {UserService} from "./user.service";
     LoginPage,
     TaopiaopiaoPage,
     SignupPage,
-    ForgetPage
+    ForgetPage,
+    MovieDetailPage
   ],
   providers: [
     StatusBar,
