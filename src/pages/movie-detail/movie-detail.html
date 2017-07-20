@@ -53,14 +53,14 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngFor="let a of imgs">
   <ion-card class="res-head" >
     <img src="assets/images/about/0.png">
     <div class="res-head-cont">
-      <img src="assets/images/3.jpg" alt="">
-      <h2>陨落星辰 第三季</h2>
+      <img src="{{a.cover}}" alt="">
+      <h2>{{a.title}}</h2>
       <p>动作 / 军事 / 科幻</p>
-      <p> 2013-06-09(美国)</p>
+      <p> 2017-01-01(中国)</p>
     </div>
     <div class="res-head-btn">
       <h1>7.5</h1>
@@ -72,7 +72,152 @@
     <span>有汁源</span>
     <span>3个播放源 <ion-icon name="arrow-forward"></ion-icon></span>
   </div>
-
+  <div class="maodian">
+   <ion-grid>
+     <ion-row>
+       <ion-col col-4>
+       <a href="#pinglun">评论</a>
+      </ion-col>
+       <ion-col col-4>
+         <a href="#xinxi">信息</a>
+       </ion-col>
+       <ion-col col-4>
+         <a href="#retui">热荐</a>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+  </div>
+  <div name="pinglun" id="pinglun">
+    <h3>评论</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/0.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>大甜甜最美</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/1.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>林更新好帅啊</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/2.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>哈哈哈</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/3.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>么么哒</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <br>
+  <div name="xinxi" id="xinxi">
+    <h3>影片信息</h3>
+    <p>
+      该片故事背景设定在中国宋朝时期，
+      讲述了欧洲雇佣兵威廉·加林在被囚禁在长城期间，
+      发现可怕的掠食怪兽将这座巨型城墙重重围困之时，
+      他决定加入了一支由中国精英勇士们组成的大军，
+      共同对抗怪兽饕餮的故事。中国的古代，
+      以人类为饵食的怪兽——饕餮，
+      每六十年便会集结到人类的领地觅食，
+      捍卫领土的人类军团铸造长城的目的也是为了抵御怪兽的入侵。
+      来到中国寻觅黑火药发财的外国雇佣军威廉·加林（马特·达蒙饰）
+      与佩罗· 托瓦尔（佩德罗·帕斯卡饰），
+      因为一次偶然的机会误打误撞进入了长城，
+      认识了对抗饕餮的中国无影禁军，
+      也见证了无影禁军的精锐和勇敢，
+      并被这群战士之间的信任和牺牲所感动，
+      威廉·加林义无反顾地加入到了共同守护人类的战斗当中。
+      然而，在对抗的过程中，他们却发现饕餮大军不断进化，
+      到最后已经能够从长城打进皇宫，
+      一场大战也由此拉开
+    </p>
+  </div>
+  <br>
+  <div name="retui" id="retui">
+    <h4>你可能喜欢的影片</h4>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="assets/images/about/2.jpg" alt="">
+          <p>金刚</p>
+        </ion-col>
+        <ion-col>
+          <img src="assets/images/about/5.jpg" alt="">
+          <p>雷神</p>
+        </ion-col>
+        <ion-col>
+          <img src="assets/images/about/4.jpg" alt="">
+          <p>独立日</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="assets/images/about/2.jpg" alt="">
+          <p>金刚</p>
+        </ion-col>
+        <ion-col>
+          <img src="assets/images/about/5.jpg" alt="">
+          <p>雷神</p>
+        </ion-col>
+        <ion-col>
+          <img src="assets/images/about/4.jpg" alt="">
+          <p>独立日</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
 

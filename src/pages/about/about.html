@@ -4,7 +4,6 @@
       <ion-icon name="ios-options-outline"></ion-icon>
       <ion-icon name="ios-search-outline"></ion-icon>
       <ion-segment-button value="kittens">
-
         <ion-grid>
           <ion-row>
             <ion-col col-2 offset-7>
@@ -15,7 +14,7 @@
       </ion-segment-button>
       <ion-segment-button value="puppies">
         <ion-grid>
-          <ion-row>
+          <ion-row (click)="get()">
             <ion-col col-3 offset-2>
               院线
             </ion-col>
@@ -41,17 +40,17 @@
       </div>
       <div [ngSwitch]="icon">
         <ion-list *ngSwitchCase="'onShow'">
-          <ion-card (click)="detail(1)">
+          <ion-card (click)="detail(a.id)" *ngFor="let a of imgs">
             <ion-grid>
-              <ion-row>
+              <ion-row >
                 <ion-col col-3>
-                  <img src="assets/images/about/1.jpg" alt="">
+                  <img src="{{a.cover}}" alt="">
                 </ion-col>
                 <ion-col col-6 offset-1>
-                  <h5>长城</h5>
-                  <p style="color: #ccc;">“新颖视角重塑长城经典”</p>
-                  <p>马特·达蒙/景甜/张涵予/林更新/彭于晏/刘德华/黄轩</p>
-                  <p>2017-01-01 上映</p>
+                  <h5>{{a.title}}</h5>
+                  <p class="desc">{{a.desc}}</p>
+                  <p>导演：{{a.dir}}</p>
+                  <p>地区：{{a.area}}</p>
                 </ion-col>
                 <ion-col col-2>
                   <button ion-button class="goupiao">购票</button>
@@ -60,24 +59,6 @@
             </ion-grid>
           </ion-card>
 
-          <ion-card>
-            <ion-grid>
-              <ion-row>
-                <ion-col col-3>
-                  <img src="assets/images/about/2.jpg" alt="">
-                </ion-col>
-                <ion-col col-6 offset-1>
-                  <h5>金刚骷髅岛</h5>
-                  <p style="color: #ccc;">“新颖视角重塑金刚经典”</p>
-                  <p>汤姆·希德勒斯顿 布丽·拉尔森 塞缪尔·杰克逊 约翰·古德曼 景甜 约翰· 托比·凯贝尔</p>
-                  <p>2017-01-01 上映</p>
-                </ion-col>
-                <ion-col col-2>
-                  <button ion-button class="goupiao">购票</button>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-card>
         </ion-list>
         <ion-list *ngSwitchCase="'willShow'">
           <ion-card>
