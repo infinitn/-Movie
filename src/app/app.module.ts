@@ -12,7 +12,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {SettingPage} from "../pages/setting/setting";
 import {LoginPage} from "../pages/login/login";
-import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
+import {TaopiaopiaoPage} from "../pages/taopiaopiao/taopiaopiao";
+import {SignupPage} from "../pages/signup/signup";
+import {ForgetPage} from "../pages/forget/forget";
+import {HttpModule} from "@angular/http";
+import {UserService} from "./user.service";
 
 @NgModule({
   declarations: [
@@ -23,10 +27,14 @@ import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
     TabsPage,
     SettingPage,
     LoginPage,
-    MovieDetailPage
+    TaopiaopiaoPage,
+    SignupPage,
+    ForgetPage
+
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -38,11 +46,15 @@ import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
     TabsPage,
     SettingPage,
     LoginPage,
-    MovieDetailPage
+    TaopiaopiaoPage,
+    SignupPage,
+    ForgetPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    UserService,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import {AlertController, NavController, NavParams} from 'ionic-angular';
+import {LoginPage} from "../login/login";
+import {SignupPage} from "../signup/signup";
 
 /**
  * Generated class for the SettingPage page.
@@ -13,8 +15,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'setting.html',
 })
 export class SettingPage {
+  show:boolean = true;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -32,5 +36,21 @@ export class SettingPage {
   itemSelected(item: string) {
     console.log("Selected Item", item);
   }
+
+  go(){
+    this.navCtrl.push(
+      LoginPage,
+    )
+  }
+
+  goSign(){
+    this.navCtrl.push(
+      SignupPage,
+    )
+  }
+
+
+
+
 
 }

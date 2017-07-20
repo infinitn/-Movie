@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import {NavController} from 'ionic-angular';
 import {SettingPage} from "../setting/setting";
 import {LoginPage} from "../login/login";
+import {TaopiaopiaoPage} from "../taopiaopiao/taopiaopiao";
+import {SignupPage} from "../signup/signup";
+import {UserService} from "../../app/user.service";
 
 
 
@@ -10,8 +13,16 @@ import {LoginPage} from "../login/login";
   templateUrl: 'contact.html'
 })
 export class ContactPage {
-
-  constructor(public navCtrl: NavController) {
+  show:boolean = true;
+  pet:string = 'kittens';
+  name=[];
+  phone='';
+  constructor(public navCtrl: NavController,public users:UserService) {
+    if (this.users.user)
+    {
+      this.name.push(this.users.user);
+      this.phone = this.name[0].phone;
+    }
 
   }
 
@@ -20,14 +31,29 @@ export class ContactPage {
       SettingPage,
     )
   }
-
-  login(){
+  goo(){
     this.navCtrl.push(
       LoginPage,
     )
   }
 
+
+  goSign(){
+    this.navCtrl.push(
+      SignupPage,
+    )
+  }
+
+  piaopiao(){
+    this.navCtrl.push(
+      TaopiaopiaoPage
+    )
+  }
+
+
 }
+
+
 
 // @Component({
 //   selector: 'page-contact',

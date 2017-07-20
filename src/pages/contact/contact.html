@@ -7,38 +7,55 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<style>
+  .pname
+  {
+    display: inline-block;
+    width:120px;
+    height: 30px;
+    background-color: orange;
+    color: white;
+    margin-left: 30px;
+    text-align: center;
+
+  }
+
+</style>
+
+
+<ion-content class="content">
   <div class="denglu">
     <ion-grid>
       <ion-row>
         <ion-col col-3> </ion-col>
         <ion-col col-6>
-          <button ion-button color="secondary" round class="btn" (click)="login()">登录</button>
+          <button ion-button color="secondary" round class="btn" (click)="show = !show" *ngIf="!phone">登录</button>
         </ion-col>
       </ion-row>
     </ion-grid>
+    <span class="pname">{{phone}},您好！</span>
 
-    <ul>
-      <li>
-        <a href="">
+    <ul class="row">
+      <li clo-3 (click)="show = !show">
+        <a>
           <ion-icon name="ios-chatbubbles" class="message"></ion-icon>
           <p>话题</p>
         </a>
       </li>
-      <li>
-        <a href="">
+      <li clo-3 (click)="show = !show">
+        <a>
           <ion-icon name="ios-mail-open" class="message"></ion-icon>
           <p>消息</p>
         </a>
       </li>
-      <li>
-        <a href="">
+      <li clo-3 (click)="show = !show">
+        <a>
           <ion-icon name="ios-paper" class="message"></ion-icon>
           <p>文章</p>
         </a>
       </li>
-      <li>
-        <a href="">
+      <li clo-3>
+        <a (click)="piaopiao()">
           <ion-icon name="md-list-box" class="message"></ion-icon>
           <p>订单</p>
         </a>
@@ -47,33 +64,74 @@
   </div>
   <div style="clear: both"></div>
   <div style="width: 414px; height: 5px;background-color:#eee;margin-top: 15px;"></div>
-  <div class="yingpian">
-    <ul>
-      <li>单片</li>
-      <li>影单</li>
-    </ul>
-    <p class="collect">我收藏的<span>number</span>部影片</p>
-    <div class="soucang">
-      <ion-icon name="ios-add-outline" class="add"></ion-icon>
-      <p class="piandan">本月片单</p>
-    </div>
-  </div>
-
-  <div class="hide">
+  <!--弹框-->
+  <div class="divblock" *ngIf="!show">
     <p>登录毒舌电影APP</p>
-    <ul>
-      <li>
+    <ul class="row">
+      <li col-4>
         <img src="../assets/icon/微信.png" alt="">
+        <p>微信</p>
+      </li>
+      <li col-4>
         <img src="../assets/icon/QQ.png" alt="">
+        <p>QQ</p>
+      </li>
+      <li col-4>
         <img src="../assets/icon/微博.png" alt="">
+        <p>微博</p>
       </li>
     </ul>
 
-    <button ion-button color="secondary" outline>Secondary Outline</button>
+    <div class="row">
+      <div col-6 offset-2>
+        <button ion-button color="secondary" (click)="goo()">立即登录</button>
+      </div>
+    </div>
 
     <p>
-      <a href="">手机号注册</a>
+      <a (click)="goSign()">手机号注册</a>
     </p>
+
+    <div class="close" (click)="show = !show ">X</div>
   </div>
+  <div class="yingpian">
+    <div padding>
+      <ion-segment [(ngModel)]="pet">
+        <ion-segment-button value="kittens" class="sigle">
+          影片
+        </ion-segment-button>
+        <ion-segment-button value="puppies" class="sigle">
+          影单
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+  </div>
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <p class="collect">我收藏的<span>number</span>个影单</p>
+          <div class="empty">
+            <p>没可能，表单还是空的.常来侃侃，喜欢就收，看片不慌。</p>
+          </div>
+        </ion-thumbnail>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-start>
+          <p class="collect">我收藏的<span>number</span>部影片</p>
+          <div class="soucang">
+            <ion-icon name="ios-add-outline" class="add"></ion-icon>
+            <p class="piandan">本月片单</p>
+          </div>
+        </ion-thumbnail>
+      </ion-item>
+    </ion-list>
+  </div>
+
+
+
 </ion-content>
 
