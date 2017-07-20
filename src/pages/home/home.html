@@ -1,13 +1,12 @@
 
 <ion-header>
   <ion-navbar>
-    <ion-title>侃侃Movie</ion-title>
-    <ion-icon name="search"></ion-icon>
+    <ion-title style="float: left">侃侃Movie</ion-title>
+    <ion-icon name="search" style="float: right;font-size: 30px;"></ion-icon>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
   <div>
     <ion-segment [(ngModel)]="pet">
       <ion-segment-button value="kittens">
@@ -24,13 +23,19 @@
       <ion-item>
         <ion-slides pager style="height: 150px">
           <ion-slide class="banner">
-            <img src="assets/images/1.jpg" alt="">
+            <img src="assets/images/b-1.jpg" alt="">
           </ion-slide>
           <ion-slide  class="banner">
-            <img src="assets/images/4.jpg" alt="">
+            <img src="assets/images/b-2.jpg" alt="">
           </ion-slide>
           <ion-slide  class="banner">
-            <img src="assets/images/3.jpg" alt="">
+            <img src="assets/images/b-3.jpg" alt="">
+          </ion-slide>
+          <ion-slide  class="banner">
+            <img src="assets/images/b-4.jpg" alt="">
+          </ion-slide>
+          <ion-slide  class="banner">
+            <img src="assets/images/b-5.jpg" alt="">
           </ion-slide>
         </ion-slides>
         <ion-grid>
@@ -40,14 +45,20 @@
           </ion-row>
         </ion-grid>
         <p class="hot"><span><i>热门影评</i></span></p>
-        <div class="h-head">
-          <p><ion-icon name="bicycle"></ion-icon> <span> 毒Sir</span></p>
-          <p>年度评分第一国产片就这么完了？不能吧</p>
-          <img src="assets/images/5.jpg" alt=""><br>
-          <p><span>14小时前</span><span>38 <ion-icon name="text-outline"></ion-icon></span></p>
-        </div>
         <ion-list class="list1">
-          <ion-item></ion-item>
+          <ion-item>
+            <ion-row class="h-head">
+              <ion-col col-12><p><ion-icon name="bicycle"></ion-icon> <span> 毒Sir</span></p></ion-col>
+              <ion-col col-12><p>年度评分第一国产片就这么完了？不能吧</p></ion-col>
+              <ion-col col-12><img src="assets/images/5.jpg" alt=""></ion-col>
+              <ion-col col-12>
+                <p class="dir">
+                  <span>14小时前</span>
+                  <span>38 <ion-icon name="text-outline"></ion-icon></span>
+                </p>
+              </ion-col>
+            </ion-row>
+          </ion-item>
           <ion-item>
             <div>
               <p class="text1">一集入坑，年度最佳台剧（男主丑哭）</p>
@@ -169,19 +180,172 @@
           </ion-item>
         </ion-list>
         <p class="hot"><span><i>热门汁源</i></span></p>
-        <div class="imgs1">
-          <img src="assets/images/7.jpg" alt="">
-          <img src="assets/images/8.jpg" alt="">
-          <img src="assets/images/9.jpg" alt="">
-          <img src="assets/images/10.jpg" alt="">
-        </div>
+        <p style="height: 20px"></p>
+        <ion-row class="resource">
+          <ion-col col-6>
+            <img src="assets/images/7.jpg" alt="">
+            <p class="text-title">这简直就是我的噩梦</p>
+            <p><ion-icon name="bicycle"></ion-icon> 猿魔</p>
+          </ion-col>
+          <ion-col col-6>
+            <img src="assets/images/8.jpg" alt="">
+            <p class="text-title">对唔住，我喺差人</p>
+            <p><ion-icon name="bicycle"></ion-icon> 床头跪</p>
+          </ion-col>
+          <ion-col col-6>
+            <img src="assets/images/9.jpg" alt="">
+            <p class="text-title">全球黑帮电影图鉴</p>
+            <p><ion-icon name="bicycle"></ion-icon> 博拉图</p>
+          </ion-col>
+          <ion-col col-6>
+            <img src="assets/images/10.jpg" alt="">
+            <p class="text-title">这才是真正的艺术</p>
+            <p><ion-icon name="bicycle"></ion-icon> 应催·斯汀</p>
+          </ion-col>
+        </ion-row>
       </ion-item>
     </ion-list>
     <!--毒舌电影-->
     <ion-list *ngSwitchCase="'puppies'">
-      <ion-item>
-        <h2>毒舌影评</h2>
-      </ion-item>
+      <div class="du_wrap">
+        <div class="list">
+          <div class="du_list_h">
+            <span>/</span> <h3 class="du_list_h3"> 今日 </h3> <span>/</span>
+          </div>
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span>猿魔</span>
+          </p>
+          <h5>好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h5>
+          <img src="assets/images/1.jpg" alt="" width="100%">
+          <div class="du_list_date">
+            <span>3小时前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </div>
+        </div>
+        <div class="wall"></div>
+        <div class="list">
+          <div class="du_list_h">
+            <span>/</span> <h3 class="du_list_h3"> 昨日 </h3> <span>/</span>
+          </div>
+
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span>猿魔</span>
+          </p>
+          <h5>好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h5>
+          <img src="assets/images/4.jpg" alt="" width="100%">
+          <div class="du_movie">
+            <img src="assets/images/4.jpg" alt="" height="100% ">
+            <span>6.2</span>
+            <p class="du_movie_title">一天</p>
+            <p class="du_movie_type">剧情</p>
+          </div>
+          <div class="du_list_date">
+            <ion-icon name="md-contact"></ion-icon>
+            <span>猿魔</span>
+            <span>一天前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </div>
+        </div>
+        <div class="du_list_item">
+          <img src="assets/images/3.jpg" alt="" height="100%">
+          <h6 class="du_list_item_title">好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h6>
+          <p class="du_list_item_movie"><b>/</b><span> 来自《悟空传》</span></p>
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span>猿魔</span>
+            <span>一天前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </p>
+
+        </div>
+
+        <div class="du_list_item">
+          <img src="assets/images/3.jpg" alt="" height="100%">
+          <h6 class="du_list_item_title">好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h6>
+          <p class="du_list_item_movie"><b>/</b><span> 来自《悟空传》</span></p>
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span>猿魔</span>
+            <span>一天前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </p>
+
+        </div>
+        <div class="du_list_item">
+          <img src="assets/images/3.jpg" alt="" height="100%">
+          <h6 class="du_list_item_title">好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h6>
+          <p class="du_list_item_movie"><b>/</b><span> 来自《悟空传》</span></p>
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span>猿魔</span>
+            <span>一天前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </p>
+        </div>
+
+        <!--前天-->
+        <div class="wall"></div>
+        <div class="list">
+          <div class="du_list_h">
+            <span>/</span> <h3 class="du_list_h3"> 前日 </h3> <span>/</span>
+          </div>
+
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span>毒Sir</span>
+          </p>
+          <h5>21世纪最好好的25部电影（专治不服）</h5>
+          <div class="du_list_img">
+            <img src="assets/images/4.jpg">
+            <img src="assets/images/5.jpg">
+            <img src="assets/images/4.jpg">
+          </div>
+          <p>
+            <span>2天前</span>
+            <span class="du_list_span">134<ion-icon name="ios-create-outline"></ion-icon></span>
+          </p>
+
+        </div>
+        <div class="du_list_item">
+          <img src="assets/images/3.jpg" alt="" height="100%">
+          <h6 class="du_list_item_title">好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h6>
+          <p class="du_list_item_movie"><b>/</b><span> 来自《悟空传》</span></p>
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span>猿魔</span>
+            <span>一天前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </p>
+
+        </div>
+
+        <div class="du_list_item">
+          <img src="assets/images/3.jpg" alt="" height="100%">
+          <h6 class="du_list_item_title">好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h6>
+          <p class="du_list_item_movie"><b>/</b><span> 来自《悟空传》</span></p>
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span class="du_list_span">猿魔</span>
+            <span class="du_list_span">2天前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </p>
+
+        </div>
+        <div class="du_list_item">
+          <img src="assets/images/3.jpg" alt="" height="100%">
+          <h6 class="du_list_item_title">好莱坞把裤子都脱了，就为抱紧中国爸爸的大腿</h6>
+          <p class="du_list_item_movie"><b>/</b><span> 来自《悟空传》</span></p>
+          <p>
+            <ion-icon name="md-contact"></ion-icon>
+            <span class="du_list_span">猿魔</span>
+            <span class="du_list_span">2天前</span>
+            <span class="du_list_span">27<ion-icon name="ios-create-outline"></ion-icon></span>
+          </p>
+
+        </div>
+      </div>
     </ion-list>
   </div>
 </ion-content>
