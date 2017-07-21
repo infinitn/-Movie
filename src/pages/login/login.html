@@ -13,17 +13,17 @@
 
     <ion-item>
       <ion-label fixed>账号:</ion-label>
-      <ion-input type="text" placeholder="请输入手机号"></ion-input>
+      <ion-input type="text" placeholder="请输入手机号" [(ngModel)]="user.phone"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label fixed>密码:</ion-label>
-      <ion-input type="password" placeholder="输入登录密码"></ion-input>
+      <ion-input type="password" placeholder="输入登录密码" [(ngModel)]="user.password"></ion-input>
     </ion-item>
 
   </ion-list>
 
-  <button ion-button block>登录</button>
+  <button ion-button block (click)="denglu()">登录</button>
   <div class="forgetgroup">
     <a class="forget" (click)="forget()">忘记密码</a>
     <a class="sin" (click)="sign()">新用户注册</a>
@@ -49,6 +49,8 @@
       </li>
     </ul>
   </div>
+
+
 
   <p class="free">游客模式进入</p>
 </ion-content>

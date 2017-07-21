@@ -1,0 +1,61 @@
+<!--
+  Generated template for the FankuiPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>用户反馈</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="box1">
+    <div class="kong"></div>
+    <h5>问题描述</h5>
+    <textarea  cols="30" rows="10" placeholder="请详细描述您所遇到的问题或建议"></textarea>
+  </div>
+
+  <div class="box2">
+    <div class="kong"></div>
+    <h5>联系方式</h5>
+    <textarea cols="30" rows="10" placeholder="请留下您的联系方式(QQ/微信/电话/等)"></textarea>
+  </div>
+
+</ion-content>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  ion-content{
+    margin-top: 15px;
+  }
+  ion-content .box1{
+    width: 100%;
+    height:200px;
+    /*background-color: red;*/
+  }
+  ion-content .box1 .kong,ion-content .box2 .kong{
+    height: 20px;
+    width: 3px;
+    border:3px solid orange;
+    float: left;
+  }
+  h5{
+    margin-left: 15px;
+  }
+  textarea{
+    margin-top: 10px;
+    width:80%;
+    height:125px;
+    background-color: #eee;
+    border-style: none;
+  }
+
+
+</style>

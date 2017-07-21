@@ -5,6 +5,7 @@ import {LoginPage} from "../login/login";
 import {TaopiaopiaoPage} from "../taopiaopiao/taopiaopiao";
 import {SignupPage} from "../signup/signup";
 import {UserService} from "../../app/user.service";
+import {BianjiPage} from "../bianji/bianji";
 
 
 
@@ -49,6 +50,14 @@ export class ContactPage {
       TaopiaopiaoPage
     )
   }
+
+  bianji(){
+    this.navCtrl.push(
+      BianjiPage
+    )
+  }
+
+
 
 
 }

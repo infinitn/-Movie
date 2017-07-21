@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
-import {AlertController, NavController, NavParams} from 'ionic-angular';
+import {Component, OnInit} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
 import {LoginPage} from "../login/login";
 import {SignupPage} from "../signup/signup";
+import {UserService} from "../../app/user.service";
+import {FankuiPage} from "../fankui/fankui";
 
 /**
  * Generated class for the SettingPage page.
@@ -14,28 +16,23 @@ import {SignupPage} from "../signup/signup";
   selector: 'page-setting',
   templateUrl: 'setting.html',
 })
-export class SettingPage {
+export class SettingPage implements OnInit{
   show:boolean = true;
-
   constructor(public navCtrl: NavController,
-              public navParams: NavParams) {
+              public navParams: NavParams,
+              public users:UserService
+  ) {
+
+  }
+
+  ngOnInit(): void {
+
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingPage');
   }
 
-  items = [
-    '推荐给好友',
-    '意见反馈',
-    '给我们评分',
-    '版本检测',
-    '关于毒舌电影'
-  ];
-
-  itemSelected(item: string) {
-    console.log("Selected Item", item);
-  }
 
   go(){
     this.navCtrl.push(
@@ -48,6 +45,13 @@ export class SettingPage {
       SignupPage,
     )
   }
+
+  fankui(){
+    this.navCtrl.push(
+      FankuiPage
+    )
+  }
+
 
 
 

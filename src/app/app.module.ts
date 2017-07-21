@@ -18,6 +18,8 @@ import {ForgetPage} from "../pages/forget/forget";
 import {HttpModule} from "@angular/http";
 import {UserService} from "./user.service";
 import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
+import {BianjiPage} from "../pages/bianji/bianji";
+import {FankuiPage} from "../pages/fankui/fankui";
 
 @NgModule({
   declarations: [
@@ -31,8 +33,11 @@ import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
     TaopiaopiaoPage,
     SignupPage,
     ForgetPage,
-    MovieDetailPage
+    MovieDetailPage,
 
+    MovieDetailPage,
+    BianjiPage,
+    FankuiPage
   ],
   imports: [
     BrowserModule,
@@ -52,6 +57,8 @@ import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
     SignupPage,
     ForgetPage,
     MovieDetailPage
+
+
   ],
   providers: [
     StatusBar,

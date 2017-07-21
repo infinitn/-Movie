@@ -41,7 +41,7 @@ export class SignupPage {
     this.http.post('http://localhost:3000/zhuce',this.user)
       .toPromise()
       .then((res)=> {
-          // console.log(res.json())
+          console.log(res.json())
         if(res.json().success) {
           this.users.user = this.user;
           console.log(this.users.user);
@@ -50,6 +50,7 @@ export class SignupPage {
 
       })
   }
+
 
 
 }
