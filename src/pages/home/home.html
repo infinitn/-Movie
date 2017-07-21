@@ -7,6 +7,11 @@
 </ion-header>
 
 <ion-content padding>
+
+  <p *ngFor="let a of imgs">
+    <img src="{{a.cover}}" alt="">
+  </p>
+
   <div>
     <ion-segment [(ngModel)]="pet">
       <ion-segment-button value="kittens">
@@ -23,19 +28,19 @@
       <ion-item>
         <ion-slides pager style="height: 150px">
           <ion-slide class="banner">
-            <img src="assets/images/b-1.jpg" alt="">
+            <img src="assets/images/7.jpg" alt="图片">
           </ion-slide>
           <ion-slide  class="banner">
-            <img src="assets/images/b-2.jpg" alt="">
+            <img src="assets/images/5.jpg" alt="">
           </ion-slide>
           <ion-slide  class="banner">
-            <img src="assets/images/b-3.jpg" alt="">
+            <img src="assets/images/8.jpg" alt="">
           </ion-slide>
           <ion-slide  class="banner">
-            <img src="assets/images/b-4.jpg" alt="">
+            <img src="assets/images/9.jpg" alt="">
           </ion-slide>
           <ion-slide  class="banner">
-            <img src="assets/images/b-5.jpg" alt="">
+            <img src="assets/images/10.jpg" alt="">
           </ion-slide>
         </ion-slides>
         <ion-grid>

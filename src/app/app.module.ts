@@ -34,6 +34,8 @@ import {FankuiPage} from "../pages/fankui/fankui";
     SignupPage,
     ForgetPage,
     MovieDetailPage,
+
+    MovieDetailPage,
     BianjiPage,
     FankuiPage
   ],
@@ -54,9 +56,7 @@ import {FankuiPage} from "../pages/fankui/fankui";
     TaopiaopiaoPage,
     SignupPage,
     ForgetPage,
-    MovieDetailPage,
-    BianjiPage,
-    FankuiPage
+    MovieDetailPage
   ],
   providers: [
     StatusBar,
