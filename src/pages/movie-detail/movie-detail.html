@@ -1,50 +1,4 @@
-<!--&lt;!&ndash;-->
-  <!--Generated template for the MovieDetailPage page.-->
-
-  <!--See http://ionicframework.com/docs/components/#navigation for more info on-->
-  <!--Ionic pages and navigation.-->
-<!--&ndash;&gt;-->
-<!--<ion-header class="header">-->
-
-  <!--<ion-navbar>-->
-    <!--<ion-title>电影详情</ion-title>-->
-    <!--&lt;!&ndash;<ion-fab>&ndash;&gt;-->
-      <!--<button ion-fab mini class="share"><ion-icon name="md-share"></ion-icon></button>-->
-      <!--<ion-fab-list>-->
-        <!--<button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>-->
-        <!--<button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>-->
-        <!--<button ion-fab><ion-icon name="ios-chatbubbles"></ion-icon></button>-->
-        <!--<button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>-->
-      <!--</ion-fab-list>-->
-    <!--&lt;!&ndash;</ion-fab>&ndash;&gt;-->
-  <!--</ion-navbar>-->
-
-<!--</ion-header>-->
-
-<!--<ion-content padding class="ion-content">-->
-  <!--<ion-card class="ion-card">-->
-    <!--<img src="assets/images/about/0.png" alt="">-->
-    <!--<div class="jianjie">-->
-      <!--<ion-grid>-->
-        <!--<ion-row>-->
-          <!--<ion-col col-12>-->
-            <!--<h2 style="color: #f4f4f4;">长城</h2>-->
-            <!--<div class="card-subtitle">新视角重塑长城经典</div>-->
-            <!--<p class="p1">剧情|动作|奇幻</p>-->
-            <!--<p class="p2">2017-07-13上映 123分钟</p>-->
-          <!--</ion-col>-->
-        <!--</ion-row>-->
-      <!--</ion-grid>-->
-    <!--</div>-->
-  <!--</ion-card>-->
-
-
-  <!--<div id="scrollArea">-->
-    <!--<a>Go to bottom</a>-->
-    <!--<a id="bottom"></a> You're at the bottom!-->
-  <!--</div>-->
-<!--</ion-content>-->
-<ion-header style="opacity: .3;">
+<ion-header>
   <ion-navbar>
     <ion-title style="float: right;opacity: 1;">
       <ion-icon name="share-alt"></ion-icon>
@@ -63,7 +17,7 @@
       <p> 2017-01-01(中国)</p>
     </div>
     <div class="res-head-btn">
-      <h1>7.5</h1>
+      <h1>{{a.rating}}</h1>
       <p><span></span>佳片推荐</p>
     </div>
   </ion-card>
@@ -162,24 +116,7 @@
   <div name="xinxi" id="xinxi">
     <h3>影片信息</h3>
     <p>
-      该片故事背景设定在中国宋朝时期，
-      讲述了欧洲雇佣兵威廉·加林在被囚禁在长城期间，
-      发现可怕的掠食怪兽将这座巨型城墙重重围困之时，
-      他决定加入了一支由中国精英勇士们组成的大军，
-      共同对抗怪兽饕餮的故事。中国的古代，
-      以人类为饵食的怪兽——饕餮，
-      每六十年便会集结到人类的领地觅食，
-      捍卫领土的人类军团铸造长城的目的也是为了抵御怪兽的入侵。
-      来到中国寻觅黑火药发财的外国雇佣军威廉·加林（马特·达蒙饰）
-      与佩罗· 托瓦尔（佩德罗·帕斯卡饰），
-      因为一次偶然的机会误打误撞进入了长城，
-      认识了对抗饕餮的中国无影禁军，
-      也见证了无影禁军的精锐和勇敢，
-      并被这群战士之间的信任和牺牲所感动，
-      威廉·加林义无反顾地加入到了共同守护人类的战斗当中。
-      然而，在对抗的过程中，他们却发现饕餮大军不断进化，
-      到最后已经能够从长城打进皇宫，
-      一场大战也由此拉开
+     {{a.desc}}
     </p>
   </div>
   <br>
@@ -187,33 +124,9 @@
     <h4>你可能喜欢的影片</h4>
     <ion-grid>
       <ion-row>
-        <ion-col>
-          <img src="assets/images/about/2.jpg" alt="">
-          <p>金刚</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/images/about/5.jpg" alt="">
-          <p>雷神</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/images/about/4.jpg" alt="">
-          <p>独立日</p>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <img src="assets/images/about/2.jpg" alt="">
-          <p>金刚</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/images/about/5.jpg" alt="">
-          <p>雷神</p>
-        </ion-col>
-        <ion-col>
-          <img src="assets/images/about/4.jpg" alt="">
-          <p>独立日</p>
+        <ion-col *ngFor="let a of imgs">
+          <img src="{{a.cover}}" alt="">
+          <p>{{a.title}}</p>
         </ion-col>
       </ion-row>
     </ion-grid>
