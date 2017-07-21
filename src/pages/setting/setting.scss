@@ -5,6 +5,113 @@ page-setting {
     margin: 0 auto;
     text-align: center;
   }
+  .content .set_login{
+    font-size: 16px;
+    width:100%;
+    height:45px;
+    line-height: 45px;
+  }
+  .content{
+    position: relative;
+  }
+  .content .selfsetting{
+    padding: 0;
+    width:100%;
+    height: 35px;
+    line-height: 35px;
+    /*background-color: red;*/
+    position: relative;
+  }
 
+  .content ul{
+    list-style-type:none;
+    padding: 0;
+  }
+  .content ul li{
+    width: 100%;
+    height:50px;
+    line-height: 50px;
+    border-bottom:1px solid gray ;
+    position: relative;
+  }
+  .content ul li .img1,.content .selfsetting .img1{
+    width:25px;
+    height:25px;
+    position: absolute;
+    left:5px;
+    top:45%;
+  }
+  .content ul li span,.content .selfsetting span{
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+    left:35px;
+    top: 25%;
+  }
+  .content ul li .img2,.content .selfsetting .img2{
+    width:20px;
+    hieght:20px;
+    position: absolute;
+    right:5px;
+    top:50%;
+  }
+  .fullbtn{
+    color: black;
+    background-color: orange;
+    margin-top: 30px;
+  }
+  .divblock{
+    height:344px;
+    width: 344px;
+    background-color:#ddd;
+    z-index: 999;
+    position: absolute;
+    top:120px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .divblock p{
+    text-align: center;
+    font-size: 16px;
+    padding-top: 15px;
+  }
+  .divblock ul{
+    list-style: none;
+    width:300px;
+    height: 100px;
+    margin: 0  auto;
+    margin-top: 50px;
+    -webkit-padding-start: 0;
+  }
+  .divblock ul li{
+    width:90px;
+    float: left;
+    text-align: center;
+  }
+  .divblock ul li img{
+    vertical-align: middle;
+  }
+  .divblock ul li p{
+    padding: 0;
+  }
+  .divblock button{
+    color: black;
+    border-color: black;
+    background-color: #ddd;
+    border: 1px solid black;
+    width: 200px;
+  }
+  .divblock p{
+    padding: 0;
+  }
+  .divblock p a{
+    text-decoration: none;
+    color: black;
+  }
+  .close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
 
 }

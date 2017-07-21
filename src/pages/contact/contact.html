@@ -8,24 +8,40 @@
 </ion-header>
 
 <style>
-  .pname
-  {
-    display: inline-block;
-    width:120px;
-    height: 30px;
-    background-color: orange;
-    color: white;
-    margin-left: 30px;
+  .title{
     text-align: center;
-
+    line-height: 35px;
+    width:80%;
+    height:35px;
+    float: left;
   }
+  .loginsuccess{
+    position: relative;
+  }
+  .touxiang{
+    width: 60px;
+    height: 60px;
+    border: 1px solid darkslategrey;
+    border-radius: 50%;
+    margin-top: 15px;
+  }
+  .touxiangbox{
+    padding-left: 15px;
+  }
+  .goright{
+    font-size: 32px;
+    position: absolute;
+    right: 15px;
+    top: 35%;
+  }
+
 
 </style>
 
 
 <ion-content class="content">
   <div class="denglu">
-    <ion-grid>
+    <ion-grid *ngIf="!users.user">
       <ion-row>
         <ion-col col-3> </ion-col>
         <ion-col col-6>
@@ -33,7 +49,17 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-    <span class="pname">{{phone}},您好！</span>
+    <ion-list  *ngIf="users.user">
+      <ion-item class="loginsuccess">
+        <ion-thumbnail item-start class="touxiangbox">
+          <img src="../assets/icon/icecream-04.png" class="touxiang" (click)="bianji()">
+        </ion-thumbnail>
+        <h2>{{users.user.phone}}</h2>
+        <ion-icon name="ios-arrow-forward" class="goright"></ion-icon>
+      </ion-item>
+
+    </ion-list>
+
 
     <ul class="row">
       <li clo-3 (click)="show = !show">
@@ -65,7 +91,7 @@
   <div style="clear: both"></div>
   <div style="width: 414px; height: 5px;background-color:#eee;margin-top: 15px;"></div>
   <!--弹框-->
-  <div class="divblock" *ngIf="!show">
+  <div class="divblock" *ngIf="!show && !users.user">
     <p>登录毒舌电影APP</p>
     <ul class="row">
       <li col-4>
