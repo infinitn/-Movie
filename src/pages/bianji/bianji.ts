@@ -13,7 +13,7 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'bianji.html',
 })
 export class BianjiPage {
-  items = [];
+  // items = [];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
   }
@@ -25,6 +25,7 @@ export class BianjiPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad BianjiPage');
   }
+
 
 
 

@@ -57,6 +57,7 @@ import {FankuiPage} from "../pages/fankui/fankui";
     SignupPage,
     ForgetPage,
     MovieDetailPage
+
   ],
   providers: [
     StatusBar,
