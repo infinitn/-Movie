@@ -13,8 +13,8 @@
     <div class="res-head-cont">
       <img src="{{a.cover}}" alt="">
       <h2>{{a.title}}</h2>
-      <p>动作 / 军事 / 科幻</p>
-      <p> 2017-01-01(中国)</p>
+      <p>{{a.tag}}</p>
+      <!--<p> 2017-01-01(中国)</p>-->
     </div>
     <div class="res-head-btn">
       <h1>{{a.rating}}</h1>
@@ -124,7 +124,7 @@
     <h4>你可能喜欢的影片</h4>
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let a of imgs">
+        <ion-col>
           <img src="{{a.cover}}" alt="">
           <p>{{a.title}}</p>
         </ion-col>
@@ -133,4 +133,8 @@
   </div>
 
 </ion-content>
+<ion-footer>
+  <ion-icon name="md-contact"></ion-icon>
+  <input type="text" placeholder="说点什么，让更多毒饭看到你的评论~">
+</ion-footer>
 

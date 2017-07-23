@@ -12,12 +12,12 @@ export class MovieDetailPage {
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
     this.idd = navParams.data.move;
     console.log(this.idd);
-    this.http.get('http://localhost:3000/iddd',{params:{id:this.idd}).toPromise().then((res)=>{
+    this.http.get('http://localhost:3000/iddd',{params:{id:this.idd}}).toPromise().then((res)=>{
       // console.log(res);
       console.log(res.json().data);
       this.imgs = res.json().data;
       // this.title=res.json().data;
       console.log(this.imgs);
-    })
+    });
   }
 }
