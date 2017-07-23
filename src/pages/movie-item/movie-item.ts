@@ -20,6 +20,7 @@ import {MovieListPage} from "../movie-list/movie-list";
 export class MovieItemPage implements OnInit{
 
   types=[];
+
   constructor(
       public navCtrl: NavController,
       public navParams: NavParams,

@@ -22,6 +22,7 @@ export class MovieListPage implements OnInit{
   List=[];
   cover:any;
   coll=[];
+
   list_type:any;
   show:boolean=false;
   constructor(

@@ -5,9 +5,6 @@ page-about {
     height: 35px;
     position: absolute;
   }
-  ion-app.md[padding], ion-app.md[padding].scroll-content {
-    padding: 0px;
-  }
   .nav{
     position: relative;
   }
@@ -21,7 +18,6 @@ page-about {
     position: absolute;
     left: 90%;
   }
-
   .ion-card {
     position: relative;
     text-align: center;
@@ -42,6 +38,16 @@ page-about {
     top: 62%;
     width: 100%;
     color: #fff;
+  }
+  .desc{
+    color: #ccc;
+    max-width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .tag{
+    color: #ccc;
   }
 }
 

@@ -1,50 +1,4 @@
-<!--&lt;!&ndash;-->
-  <!--Generated template for the MovieDetailPage page.-->
-
-  <!--See http://ionicframework.com/docs/components/#navigation for more info on-->
-  <!--Ionic pages and navigation.-->
-<!--&ndash;&gt;-->
-<!--<ion-header class="header">-->
-
-  <!--<ion-navbar>-->
-    <!--<ion-title>电影详情</ion-title>-->
-    <!--&lt;!&ndash;<ion-fab>&ndash;&gt;-->
-      <!--<button ion-fab mini class="share"><ion-icon name="md-share"></ion-icon></button>-->
-      <!--<ion-fab-list>-->
-        <!--<button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>-->
-        <!--<button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>-->
-        <!--<button ion-fab><ion-icon name="ios-chatbubbles"></ion-icon></button>-->
-        <!--<button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>-->
-      <!--</ion-fab-list>-->
-    <!--&lt;!&ndash;</ion-fab>&ndash;&gt;-->
-  <!--</ion-navbar>-->
-
-<!--</ion-header>-->
-
-<!--<ion-content padding class="ion-content">-->
-  <!--<ion-card class="ion-card">-->
-    <!--<img src="assets/images/about/0.png" alt="">-->
-    <!--<div class="jianjie">-->
-      <!--<ion-grid>-->
-        <!--<ion-row>-->
-          <!--<ion-col col-12>-->
-            <!--<h2 style="color: #f4f4f4;">长城</h2>-->
-            <!--<div class="card-subtitle">新视角重塑长城经典</div>-->
-            <!--<p class="p1">剧情|动作|奇幻</p>-->
-            <!--<p class="p2">2017-07-13上映 123分钟</p>-->
-          <!--</ion-col>-->
-        <!--</ion-row>-->
-      <!--</ion-grid>-->
-    <!--</div>-->
-  <!--</ion-card>-->
-
-
-  <!--<div id="scrollArea">-->
-    <!--<a>Go to bottom</a>-->
-    <!--<a id="bottom"></a> You're at the bottom!-->
-  <!--</div>-->
-<!--</ion-content>-->
-<ion-header style="opacity: .3;">
+<ion-header>
   <ion-navbar>
     <ion-title style="float: right;opacity: 1;">
       <ion-icon name="share-alt"></ion-icon>
@@ -53,18 +7,18 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding *ngFor="let a of imgs">
   <ion-card class="res-head" >
     <img src="assets/images/about/0.png">
     <div class="res-head-cont">
-      <img src="assets/images/3.jpg" alt="">
-      <h2>陨落星辰 第三季</h2>
-      <p>动作 / 军事 / 科幻</p>
-      <p> 2013-06-09(美国)</p>
+      <img src="{{a.cover}}" alt="">
+      <h2>{{a.title}}</h2>
+      <p>{{a.tag}}</p>
+      <!--<p> 2017-01-01(中国)</p>-->
     </div>
     <div class="res-head-btn">
-      <h1>7.5</h1>
-      <p><span></span> 佳片推荐</p>
+      <h1>{{a.rating}}</h1>
+      <p><span></span>佳片推荐</p>
     </div>
   </ion-card>
   <div class="res-yuan">
@@ -72,7 +26,115 @@
     <span>有汁源</span>
     <span>3个播放源 <ion-icon name="arrow-forward"></ion-icon></span>
   </div>
-
+  <div class="maodian">
+   <ion-grid>
+     <ion-row>
+       <ion-col col-4>
+       <a href="#pinglun">评论</a>
+      </ion-col>
+       <ion-col col-4>
+         <a href="#xinxi">信息</a>
+       </ion-col>
+       <ion-col col-4>
+         <a href="#retui">热荐</a>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+  </div>
+  <div name="pinglun" id="pinglun">
+    <h3>评论</h3>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/0.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>大甜甜最美</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/1.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>林更新好帅啊</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/2.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>哈哈哈</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/about/movie-detail/3.jpeg">
+            </ion-avatar>
+            <h2>Marty McFly</h2>
+            <p>01-01</p>
+            <h3>么么哒</h3>
+          </ion-item>
+        </ion-col>
+        <ion-col col-2 offset-2>
+          <ion-icon name="thumbs-up">12</ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <br>
+  <div name="xinxi" id="xinxi">
+    <h3>影片信息</h3>
+    <p>
+     {{a.desc}}
+    </p>
+  </div>
+  <br>
+  <div name="retui" id="retui">
+    <h4>你可能喜欢的影片</h4>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img src="{{a.cover}}" alt="">
+          <p>{{a.title}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
+<ion-footer>
+  <ion-icon name="md-contact"></ion-icon>
+  <input type="text" placeholder="说点什么，让更多毒饭看到你的评论~">
+</ion-footer>
 

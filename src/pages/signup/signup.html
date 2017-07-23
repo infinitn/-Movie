@@ -12,7 +12,7 @@
 
     <ion-item>
       <ion-label fixed>账号:</ion-label>
-      <ion-input type="text" placeholder="输入手机号" [(ngModel)]="user.phone"></ion-input>
+      <ion-input type="text" placeholder="输入手机号" [(ngModel)]="user.phone" required></ion-input>
     </ion-item>
 
     <ion-item >
@@ -22,7 +22,7 @@
 
     <ion-item>
       <ion-label fixed>密码:</ion-label>
-      <ion-input type="password" placeholder="6~16位，数字和字母组合" [(ngModel)]="user.password"></ion-input>
+      <ion-input type="password" placeholder="6~16位，数字和字母组合" [(ngModel)]="user.password" required></ion-input>
     </ion-item>
     <button ion-button class="get">获取验证码</button>
   </ion-list>
@@ -30,7 +30,9 @@
 
   <div padding>
     <button ion-button color="primary" block (click)="zhuce()">注册</button>
+    <span class="gree">注册侃侃电影账号表示你同意 <a href="">《用户协议》</a></span>
   </div>
+
 
 </ion-content>
 
