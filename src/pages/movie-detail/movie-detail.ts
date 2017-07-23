@@ -7,14 +7,12 @@ import {Http} from "@angular/http";
   templateUrl: 'movie-detail.html',
 })
 export class MovieDetailPage {
-  id:number;
+  idd;
   imgs=[];
-
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:Http) {
-    this.id = navParams.get('id');
-  }
-  get(){
-    this.http.get('http://localhost:3000/w').toPromise().then((res)=>{
+    this.idd = navParams.data.move;
+    console.log(this.idd);
+    this.http.get('http://localhost:3000/iddd',{params:{id:this.idd}).toPromise().then((res)=>{
       // console.log(res);
       console.log(res.json().data);
       this.imgs = res.json().data;
@@ -22,9 +20,4 @@ export class MovieDetailPage {
       console.log(this.imgs);
     })
   }
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MovieDetailPage');
-  }
-
-
 }

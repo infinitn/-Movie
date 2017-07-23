@@ -16,18 +16,18 @@ export class AboutPage {
   constructor(public navCtrl: NavController,public http:Http) {
 
   }
+
   get(){
     this.http.get('http://localhost:3000/d/w').toPromise().then((res)=>{
-      // console.log(res);
+      console.log(res);
       console.log(res.json().data);
       this.imgs = res.json().data;
-
       console.log(this.imgs);
     })
   }
   detail(a){
     console.log(a);
-    this.navCtrl.push(MovieDetailPage,{a})
+    this.navCtrl.push(MovieDetailPage,{move:a})
   }
 
 }
