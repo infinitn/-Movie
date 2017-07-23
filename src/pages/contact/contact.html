@@ -56,7 +56,7 @@
         <ion-thumbnail item-start class="touxiangbox">
           <img src="../assets/icon/icecream-04.png" class="touxiang" (click)="bianji()">
         </ion-thumbnail>
-        <h2>{{users.user.phone}}</h2>
+        <h2>{{this.users.user.phone}}</h2>
         <ion-icon name="ios-arrow-forward" class="goright"></ion-icon>
       </ion-item>
 
@@ -64,19 +64,19 @@
 
 
     <ul class="row">
-      <li clo-3 (click)="show = !show">
+      <li clo-3 (click)="show = !show && myTopic()">
         <a>
-          <ion-icon name="ios-chatbubbles" class="message"></ion-icon>
-          <p>话题</p>
+          <ion-icon name="ios-chatbubbles" class="message"  ></ion-icon>
+          <p >话题</p>
         </a>
       </li>
-      <li clo-3 (click)="show = !show">
+      <li clo-3 (click)="show = !show && myMessage()">
         <a>
           <ion-icon name="ios-mail-open" class="message"></ion-icon>
           <p>消息</p>
         </a>
       </li>
-      <li clo-3 (click)="show = !show">
+      <li clo-3 (click)="show = !show && myArticle()">
         <a>
           <ion-icon name="ios-paper" class="message"></ion-icon>
           <p>文章</p>

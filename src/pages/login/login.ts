@@ -5,9 +5,8 @@ import {ForgetPage} from "../forget/forget";
 import {UserService} from "../../app/user.service";
 import {Http} from "@angular/http";
 import 'rxjs/add/operator/toPromise';
-import {toPromise} from "rxjs/operator/toPromise";
 import {ContactPage} from "../contact/contact";
-import {SettingPage} from "../setting/setting";
+// import {SettingPage} from "../setting/setting";
 
 /**
  * Generated class for the LoginPage page.
@@ -22,6 +21,10 @@ import {SettingPage} from "../setting/setting";
 })
 export class LoginPage {
   user:{} = {};
+  // use:any;
+  // us:string;
+  // ph:string[];
+
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               public users:UserService,
@@ -56,9 +59,20 @@ export class LoginPage {
       .toPromise()
       .then((res)=>{
         if (res.json().success){
-          //保存登录状态
           this.users.user = this.user;
-          console.log(this.users.user);
+          // this.use.push(this.user);
+          // this.us = JSON.stringify(this.user);
+          // console.log(JSON.stringify(this.use));
+          //保存登录状态
+          // localStorage.setItem('ph',this.us);
+          // console.log(localStorage.getItem('ph'));
+
+          // console.log(this.users.user);
+
+          localStorage.setItem('counter',this.users.user['phone']);
+          localStorage.setItem('pass',this.users.user['password']);
+          console.log(localStorage.getItem('counter'));
+          // alert('登陆成功');
           this.navCtrl.setRoot(ContactPage);
         }
       })

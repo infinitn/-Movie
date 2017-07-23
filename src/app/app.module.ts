@@ -20,6 +20,9 @@ import {UserService} from "./user.service";
 import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
 import {BianjiPage} from "../pages/bianji/bianji";
 import {FankuiPage} from "../pages/fankui/fankui";
+import {MytopicPage} from "../pages/mytopic/mytopic";
+import {MymessagePage} from "../pages/mymessage/mymessage";
+import {MyarticlePage} from "../pages/myarticle/myarticle";
 
 @NgModule({
   declarations: [
@@ -34,10 +37,11 @@ import {FankuiPage} from "../pages/fankui/fankui";
     SignupPage,
     ForgetPage,
     MovieDetailPage,
-
-    MovieDetailPage,
     BianjiPage,
-    FankuiPage
+    FankuiPage,
+    MytopicPage,
+    MymessagePage,
+    MyarticlePage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,12 @@ import {FankuiPage} from "../pages/fankui/fankui";
     TaopiaopiaoPage,
     SignupPage,
     ForgetPage,
-    MovieDetailPage
+    MovieDetailPage,
+    BianjiPage,
+    FankuiPage,
+    MytopicPage,
+    MymessagePage,
+    MyarticlePage
 
 
   ],

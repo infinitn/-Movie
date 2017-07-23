@@ -14,8 +14,52 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="content">
+  <ul>
+    <li>
+      <span>头像</span>
+      <img src="../assets/icon/icecream-04.png" alt="" class="img1 mm">
+      <img src="../assets/icon/右.png" alt="" class="img2">
+    </li>
+    <li>
+      <span class="title">昵称</span>
+      <span class="mm">只做你的小女人</span>
+      <img src="../assets/icon/右.png" alt="" class="img2">
+    </li>
+    <li>
+      <span class="title">性别</span>
+      <span class="mm">女</span>
+      <img src="../assets/icon/右.png" alt="" class="img2">
+    </li>
+    <li>
+      <span class="title">手机</span>
+      <span class="mm">未绑定</span>
+      <img src="../assets/icon/右.png" alt="" class="img2">
+    </li>
+  </ul>
 
+
+  <h5>绑定第三方账号</h5>
+  <ion-item>
+    <ion-label>
+      <img src="../assets/icon/微信.png" alt="">
+    </ion-label>
+    <ion-toggle value="foo" checked="false"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <img src="../assets/icon/QQ.png" alt="">
+    </ion-label>
+    <ion-toggle color="energized"></ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      <img src="../assets/icon/微博.png" alt="">
+    </ion-label>
+    <ion-toggle color="danger" checked="true"></ion-toggle>
+  </ion-item>
 
 
 </ion-content>
@@ -29,6 +73,68 @@
   ion-title.one{
     padding-left: 75px;
     padding-right: 45px;
+  }
+  .content{
+    /*position: relative;*/
+  }
+  .content ul{
+    list-style: none;
+    padding-left: 0px;
+  }
+  .content ul li{
+    height: 55px;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+  }
+  .content ul li:nth-child(1){
+    height:35px;
+  }
+  .content ul li:nth-child(1) span{
+    display: inline-block;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    top: 20%;
+    text-align: center;
+  }
+  .content ul li:nth-child(1) .img1{
+    width:35px;
+    height:35px;
+    border: 1px solid darkgray;
+    border-radius: 50%;
+    position: absolute;
+    right: 35px;
+    top: 0;
+  }
+  .content ul li .img2{
+    position: absolute;
+    right: 0px;
+    top: 30%;
+    width:20px;
+    height: 20px;
+  }
+  .content ul li .title{
+    display: inline-block;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    top: 25%;
+    text-align: center;
+  }
+  .content ul li .mm{
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    top: 25%;
+    right: 25px;
+    text-align: center;
+  }
+  h5{
+    color: #8c8c8c;
   }
 
 </style>

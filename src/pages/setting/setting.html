@@ -15,7 +15,7 @@
 
   <ion-list *ngIf="users.user">
 
-    <ion-card-header class="selfsetting">
+    <ion-card-header class="selfsetting" (click)="bianji()">
       <img src="../assets/icon/用户.png" alt="" class="img1">
      <span>账号信息设置</span>
       <img src="../assets/icon/右.png" alt="" class="img2">
@@ -23,11 +23,12 @@
   </ion-list>
 
   <ul>
-    <li>
+    <li (click)="hide = !hide">
       <img src="../assets/icon/点赞.png" alt="" class="img1">
       <span>推荐给好友</span>
       <img src="../assets/icon/右.png" alt="" class="img2">
     </li>
+
     <li (click)="fankui()">
       <img src="../assets/icon/意见反馈.png" alt="" class="img1">
       <span>意见反馈</span>
@@ -40,7 +41,8 @@
     </li>
     <li>
       <img src="../assets/icon/刷新.png" alt="" class="img1">
-      <span>版本检测</span>
+      <span class="span1">版本检测</span>
+      <!--<span class="span2">11.6</span>-->
       <img src="../assets/icon/右.png" alt="" class="img2">
     </li>
     <li>
@@ -50,8 +52,11 @@
     </li>
   </ul>
 
+  <button ion-button color="secondary" full class="fullbtn" (click)="exit()" *ngIf="users.user">退出登录</button>
+
+  <!--登陆弹框-->
   <div class="divblock" *ngIf="!show">
-    <p>登录毒舌电影APP</p>
+    <p>登录侃侃电影APP</p>
     <ul class="row">
       <li col-4>
         <img src="../assets/icon/微信.png" alt="">
@@ -73,17 +78,55 @@
       </div>
     </div>
 
-
     <p>
       <a (click)="goSign()" >手机号注册</a>
     </p>
     <div class="close" (click)="show = !show">X</div>
   </div>
 
-  <button ion-button color="secondary" full class="fullbtn" (click)="exit()">退出登录</button>
+  <!--推荐给好友-->
+  <div class="share" *ngIf="hide">
+    <ul>
+      <li>
+        <img src="../assets/icon/微信.png" alt="">
+      </li>
+      <li>
+        <img src="../assets/icon/朋友圈.png" alt="">
+      </li>
+      <li>
+        <img src="../assets/icon/微博.png" alt="">
+      </li>
+      <li>
+        <img src="../assets/icon/QQ.png" alt="">
+      </li>
+      <li>
+        <img src="../assets/icon/空间.png" alt="">
+      </li>
+    </ul>
 
+    <p (click)="hide = !hide">X</p>
+  </div>
 
 
 </ion-content>
-
+<style>
+  .share{
+    width: 100%;
+    height:100px;
+    background-color: gray;
+    position: absolute;
+    bottom: 0px;
+    left:0;
+    z-index: 999;
+  }
+  .share li{
+    border: none;
+    width:20%;
+    float: left;
+  }
+  .share p{
+    text-align: center;
+    margin-top: 15px;
+  }
+</style>
 

@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {NavController, NavParams, ToastController} from 'ionic-angular';
 import {LoginPage} from "../login/login";
 import {SignupPage} from "../signup/signup";
 import {UserService} from "../../app/user.service";
 import {FankuiPage} from "../fankui/fankui";
+import {BianjiPage} from "../bianji/bianji";
 
 /**
  * Generated class for the SettingPage page.
@@ -20,7 +21,7 @@ export class SettingPage implements OnInit{
   show:boolean = true;
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
-              public users:UserService
+              public users:UserService,
   ) {
 
   }
@@ -53,8 +54,11 @@ export class SettingPage implements OnInit{
   }
 
 
-
-
+  bianji(){
+    this.navCtrl.push(
+      BianjiPage
+    )
+  }
 
 
 }
