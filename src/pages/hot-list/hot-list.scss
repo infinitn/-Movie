@@ -1,0 +1,87 @@
+page-hot-list {
+
+  .m_l_nav{
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    background:linear-gradient(left,#EDCE34,#FCE564);
+    position: relative;
+  }
+  .m_l_btn{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    margin-top: -20px;
+    font-size: 18px;
+    color: white;
+    display: inline-block;
+    z-index: 9;
+  }
+  .m_h_title{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 6;
+  }
+  .m_l_nav span{
+    font-size: 26px;
+    font-weight:500;
+    color: white;
+    line-height: 26px;
+
+  }
+  .m_l_p{
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .ml_c_list{
+    width: 100%;
+    height: 124px;
+    padding-right: 8px;
+    position: relative;
+  }
+  .ml_c_img{
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 120px;
+    float: left;
+  }
+  .ml_c_title span{
+    font-size: 20px;
+    font-weight:bold;
+  }
+  .ml_c_title span:nth-child(2){
+    float: right;
+    margin-right: 8px;
+    color: red;
+  }
+  .wall{
+    width: 100%;
+    height: 3px;
+    background-color:rgba(218,218,218,0.5) ;
+    clear: both;
+  }
+  .ml_c_desc,.ml_c_act{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  .ml_c_year{
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .ml_c_collect{
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+  }
+}

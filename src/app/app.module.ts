@@ -18,16 +18,9 @@ import {ForgetPage} from "../pages/forget/forget";
 import {HttpModule} from "@angular/http";
 import {UserService} from "./user.service";
 import {MovieDetailPage} from "../pages/movie-detail/movie-detail";
-<<<<<<< HEAD
 import {MovieItemPage} from "../pages/movie-item/movie-item";
 import {MovieListPage} from "../pages/movie-list/movie-list";
-=======
-import {BianjiPage} from "../pages/bianji/bianji";
-import {FankuiPage} from "../pages/fankui/fankui";
-import {MytopicPage} from "../pages/mytopic/mytopic";
-import {MymessagePage} from "../pages/mymessage/mymessage";
-import {MyarticlePage} from "../pages/myarticle/myarticle";
->>>>>>> origin/master
+import {HotListPage} from "../pages/hot-list/hot-list";
 
 @NgModule({
   declarations: [
@@ -42,16 +35,9 @@ import {MyarticlePage} from "../pages/myarticle/myarticle";
     SignupPage,
     ForgetPage,
     MovieDetailPage,
-<<<<<<< HEAD
     MovieItemPage,
-    MovieListPage
-=======
-    BianjiPage,
-    FankuiPage,
-    MytopicPage,
-    MymessagePage,
-    MyarticlePage
->>>>>>> origin/master
+    MovieListPage,
+    HotListPage
   ],
   imports: [
     BrowserModule,
@@ -71,18 +57,9 @@ import {MyarticlePage} from "../pages/myarticle/myarticle";
     SignupPage,
     ForgetPage,
     MovieDetailPage,
-<<<<<<< HEAD
     MovieItemPage,
-    MovieListPage
-=======
-    BianjiPage,
-    FankuiPage,
-    MytopicPage,
-    MymessagePage,
-    MyarticlePage
-
-
->>>>>>> origin/master
+    MovieListPage,
+    HotListPage
   ],
   providers: [
     StatusBar,

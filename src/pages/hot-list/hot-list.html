@@ -1,0 +1,42 @@
+<!--
+  Generated template for the HotListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <div class="m_l_nav">
+    <div class=m_l_btn (click)="backbtn()">
+      返回
+    </div>
+    <div class="m_h_title">
+      <span>侃侃人气榜</span>
+      <p class="m_l_p">总计20条</p>
+    </div>
+
+  </div>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="ml_c_list" *ngFor="let list of hot">
+    <div class="ml_c_wrap" (click)="hotmovie(list)">
+      <div class="ml_c_img">
+        <img src="{{list.cover}}" height="100%">
+      </div>
+      <p class="ml_c_title">
+        <span>{{list.title}}</span>
+        <span>{{list.rating}}</span>
+      </p>
+      <p class="ml_c_desc">{{list.desc}}</p>
+      <p class="ml_c_act">{{list.act}}</p>
+    </div>
+    <div class="ml_c_year">
+      <span>{{list.year}} </span>
+      <span>年上映</span>
+    </div>
+    <div class="wall"></div>
+  </div>
+</ion-content>
